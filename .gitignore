@@ -10,3 +10,5 @@ cdk.out
 
 # local dev scripts
 scripts/env-learnerlab.ps1
+
+function.zip
