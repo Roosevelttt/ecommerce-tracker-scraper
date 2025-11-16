@@ -148,7 +148,7 @@ export async function handler(
   console.log('Tokopedia scraper finished', { processed });
 }
 
-function extractTokopediaPriceAndStock(html: string): {
+export function extractTokopediaPriceAndStock(html: string): {
   price: number | null;
   inStock: boolean | null;
 } {
