@@ -8,7 +8,9 @@
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "build:lambda": "esbuild src/handler.ts --bundle --platform=node --target=node20 --format=cjs --outfile=index.js",
+    "package": "npm run build:lambda && zip -r function.zip index.js"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.156",
